@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utaipei 2026 Summer Course Plan | 臺北市立大學 2026 夏季課程學術計畫</title>
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --primary-light: #3b82f6;
+            --secondary-color: #0f172a;
+            --background-color: #f8fafc;
+            --card-background: #ffffff;
+            --text-color: #334155;
+            --text-light: #64748b;
+            --border-color: #e2e8f0;
+            --accent-color: #38bdf8;
+            --success-color: #10b981;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans TC", sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.7;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--accent-color);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .meta-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .meta-badge {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .section-title {
+            font-size: 1.75rem;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--primary-light);
+            display: inline-block;
+        }
+
+        .card {
+            background-color: var(--card-background);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .grid .card {
+            margin-bottom: 0;
+        }
+
+        ul, ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .schedule-table th, .schedule-table td {
+            padding: 1rem 1.25rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .schedule-table th {
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 600;
+        }
+
+        .schedule-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .schedule-table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        .week-badge {
+            background-color: var(--primary-light);
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            background-color: var(--secondary-color);
+            color: var(--text-light);
+            margin-top: 5rem;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .card {
+                padding: 1.5rem;
+            }
+            .schedule-table th, .schedule-table td {
+                padding: 0.75rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Utaipei 2026 Summer Course Plan</h1>
+        <p>臺北市立大學 2026 夏季課程進度與教學計畫表</p>
+        <div class="meta-info">
+            <span class="meta-badge">📂 Repository: oceanicdayi/Utaipei_2026_summer</span>
+            <span class="meta-badge">📄 File: course_plan.md</span>
+            <span class="meta-badge">🚀 Platform: GitHub Pages</span>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div class="card">
+            <h2 class="section-title">📌 課程簡介與目標 (Course Overview)</h2>
+            <p>本網頁展示 <strong>臺北市立大學 2026 年夏季課程 (Utaipei 2026 Summer)</strong> 的完整教學規劃。本計畫旨在透過結構化的每週進度，引導學生深入掌握核心學術主題，並結合實務演練與專題研討以達成最佳學習效果。</p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <h3 class="section-title" style="font-size: 1.4rem;">🎯 核心能力培養</h3>
+                <ul>
+                    <li>理論知識深度掌握與跨學科思維</li>
+                    <li>實務專案獨立規劃與執行能力</li>
+                    <li>團隊協作與跨領域學術交流</li>
+                </ul>
+            </div>
+            
+            <div class="card">
+                <h3 class="section-title" style="font-size: 1.4rem;">📝 評量方式</h3>
+                <ul>
+                    <li>課堂參與與平時討論 (20%)</li>
+                    <li>期中階段性成果匯報 (30%)</li>
+                    <li>期末主題專案成果發表 (50%)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">📅 每週教學進度 (Weekly Schedule)</h2>
+            <div style="overflow-x: auto;">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 120px;">週次 (Week)</th>
+                            <th>主題 (Topic)</th>
+                            <th>核心內容與活動 (Content & Activities)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="week-badge">Week 01</span></td>
+                            <strong>課程導入與環境建置</strong>
+                            <td>課程綱要說明、基本觀念導入、工具與開發平台環境配置。</td>
+                        </tr>
+                        <tr>
+                            <td><span class="week-badge">Week 02</span></td>
+                            <strong>核心理論基礎 (一)</strong>
+                            <td>文獻與背景知識探討、經典案例分析與分組討論。</td>
+                        </tr>
+                        <tr>
+                            <td><span class="week-badge">Week 03</span></td>
+                            <strong>核心理論基礎 (二)</strong>
+                            <td>深入進階主題研究、實務操作工作坊第一階段。</td>
+                        </tr>
+                        <tr>
+                            <td><span class="week-badge">Week 04</span></td>
+                            <strong>實務案例與分析</strong>
+                            <td>引進當前產學界熱門專案拆解、數據或文本分析方法實踐。</td>
+                        </tr>
+                        <tr>
+                            <td><span class="week-badge">Week 05</span></td>
+                            <strong>期中成果匯報</strong>
+                            <td>各小組提案簡報、同儕互評與指導教授綜合講評。</td>
+                        </tr>
+                        <tr>
+                            <td><span class="week-badge">Week 06</span></td>
+                            <strong>進階技術與應用</strong>
+                            <td>針對期中回饋進行優化、引進進階延伸工具與應用框架。</td>
+                        </tr>
+                        <tr>
+                            <td><span class="week-badge">Week 07</span></td>
+                            <strong>專題深化與協作</strong>
+                            <td>團隊密集協作開發、個別指導與問題排查。</td>
+                        </tr>
+                        <tr>
+                            <td><span class="week-badge">Week 08</span></td>
+                            <strong>期末成果發表</strong>
+                            <td>專案最終成果展現、海報展示與學術心得分享。</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">📚 參考資源與規範 (References)</h2>
+            <p>1. 課程內容皆託管於 GitHub 儲存庫，請定期同步最新代碼與教材。</p>
+            <p>2. 請遵循學術倫理規範，所有專案成果與引用文獻均需標明出處。</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 Utaipei Summer Course. Built beautifully for <a href="https://github.com/oceanicdayi/Utaipei_2026_summer" target="_blank">oceanicdayi/Utaipei_2026_summer</a> via GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
